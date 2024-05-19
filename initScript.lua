@@ -436,7 +436,7 @@ oldNamecall = hookmetamethod_c(
 
 
         for _, str in pairs_c(bannedServices) do
-             if string_match(tostring(select(1, ...)), string_lower(str)) then
+             if string.find(tostring(select(1, ...), str) then
                 return error_c("This service has been removed for safety reasons.")
              end
         end
